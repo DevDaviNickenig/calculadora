@@ -29,6 +29,27 @@ body {
 .operador--resultado {
   grid-column: 5/6;
   grid-row: 5/7;
+
+  background-image: linear-gradient(
+    to right,
+    #cb2d3e 0%,
+    #ef473a 51%,
+    #cb2d3e 100%
+  );
+
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.operador--resultado:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 .botao {
