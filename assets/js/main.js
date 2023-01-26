@@ -54,3 +54,32 @@ function getTan(x) {
 }
 
 console.log(getTan(45));
+
+const botaoSeno = document.getElementById('seno');
+const botaoCos = document.getElementById('cos');
+const botaoTag = document.getElementById('tag');
+const botaoMulti = document.getElementById('multiplicacao');
+const botaoDivisao = document.getElementById('divisao');
+const botaoSub = document.getElementById('subtracao')
+const botaoSoma = document.getElementById('soma');
+const botaoDecimal = document.getElementById('decimal');
+const botaoRaiz = document.getElementById('raiz');
+const botaoResultado = document.getElementById('resultado');
+const displayCalc = document.getElementById('display');
+
+const calculadora = document.querySelector('.calculadora')
+const botoes = document.querySelector('.botoes')
+
+botoes.addEventListener('click', e => {
+    if (e.target.matches('botao')) {
+        const botao = e.taget;
+        const acao = botao.dataset.action
+
+        if (!acao) {
+            console.log("keypressed")
+        }
+    }
+
+
+})
+

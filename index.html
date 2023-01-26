@@ -16,33 +16,45 @@
   </head>
   <body>
     <div class="calculadora">
-      <div class="display--calculadora">0</div>
-      <button class="botao">ON</button>
-      <button class="botao">OFF</button>
+      <div class="display--calculadora" data-botao="display" id="display">
+        0
+      </div>
+      <button class="botao" data-botao="on">ON</button>
+      <button class="botao" data-botao="off">OFF</button>
       <!-- raiz -->
-      <button class="botao">sen0</button>
-      <button class="botao">cos0</button>
-      <button class="botao">tag0</button>
+      <button class="botao" data-botao="seno" id="seno">sen0</button>
+      <button class="botao" data-botao="cos" id="seno">cos0</button>
+      <button class="botao" data-botao="tag" id="tag">tag0</button>
       <button class="botao">7</button>
       <button class="botao">8</button>
       <button class="botao">9</button>
-      <button class="botao">&#215;</button>
-      <button class="botao">&#247;</button>
+      <button class="botao" data-botao="multiplicacao" id="multiplicacao">
+        &#215;
+      </button>
+      <button class="botao" data-botao="divisao" id="divisao">&#247;</button>
       <button class="botao">4</button>
       <button class="botao">5</button>
       <button class="botao">6</button>
-      <button class="botao">-</button>
-      <button class="botao">&#43;</button>
+      <button class="botao" data-botao="subtracao" id="subtracao">
+        &#9866;
+      </button>
+      <button class="botao" data-botao="soma" id="soma">&#43;</button>
       <button class="botao">1</button>
       <button class="botao">2</button>
       <button class="botao">3</button>
-      <button class="botao">%</button>
+      <button class="botao" data-botao="porcentagem" id="porcentagem">%</button>
       <button class="botao"></button>
-      <button class="botao" accesskey="0">0</button>
-      <button class="botao">.</button>
+      <button class="botao">0</button>
+      <button class="botao" data-botao="decimal" id="decimal">.</button>
       <!-- <button></button> -->
-      <button class="botao">&radic;</button>
-      <button class="operador--resultado botao">&#9868;</button>
+      <button class="botao" data-botao="raiz" id="raiz">&radic;</button>
+      <button
+        class="operador--resultado botao"
+        data-botao="resultado"
+        id="resultado"
+      >
+        &#9868;
+      </button>
     </div>
 
     <script src="assets/js/main.js"></script>
