@@ -69,14 +69,27 @@ const displayCalc = document.getElementById('display');
 
 const calculadora = document.querySelector('.calculadora')
 const botoes = document.querySelectorAll('.botao')
-console.log(botoes)
+// console.log(botoes)
 
-botoes.forEach(botao => {
-    botao.addEventListener('click', e => {
-        // const botaoClicado = botao.dataset.action
-        if (e.target.matches('button')) {
-            console.log("working")
-        }
+botoes.forEach(teclas => {
+    teclas.addEventListener('click', e => {
+        const botao = e.target
+        const acao = botao.dataset.action
+
     })
 })
 
+switch (expr) {
+    case '+':
+        n1 + n2;
+        break;
+    case '-':
+        n1 - n2;
+        break;
+    case '/':
+        n1 / n2;
+        break;
+    case '*':
+        n1 * n2;
+        break;
+}
