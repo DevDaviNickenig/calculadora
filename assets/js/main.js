@@ -1,59 +1,59 @@
-var n1 = []
-var n2 = []
+// var n1 = []
+// var n2 = []
 
-function somatoria(n1, n2) {
-    return n1 + n2
-}
+// function somatoria(n1, n2) {
+//     return n1 + n2
+// }
 
-function subtracao(n1, n2) {
-    return n1 - n2
-}
+// function subtracao(n1, n2) {
+//     return n1 - n2
+// }
 
-function multiplicacao(n1, n2) {
-    return n1 * n2
-}
+// function multiplicacao(n1, n2) {
+//     return n1 * n2
+// }
 
-function divisao(n1, n2) {
-    return n1 / n2
-}
+// function divisao(n1, n2) {
+//     return n1 / n2
+// }
 
-function cos0(radianos, raio) {
-    return Math.cos(radianos) * raio;
-}
+// function cos0(radianos, raio) {
+//     return Math.cos(radianos) * raio;
+// }
 
-console.log(cos0(1, 10));
-// Expected output: 5.403023058681398
+// console.log(cos0(1, 10));
+// // Expected output: 5.403023058681398
 
-console.log(cos0(2, 10));
-// Expected output: -4.161468365471424
+// console.log(cos0(2, 10));
+// // Expected output: -4.161468365471424
 
-console.log(cos0(Math.PI, 10));
-// Expected output: -10
+// console.log(cos0(Math.PI, 10));
+// // Expected output: -10
 
-function getCircleY(radians, radius) {
-    return Math.sin(radians) * radius;
-}
+// function getCircleY(radians, radius) {
+//     return Math.sin(radians) * radius;
+// }
 
-console.log(getCircleY(1, 10));
-//            ^?
+// console.log(getCircleY(1, 10));
+// //            ^?
 
-console.log(getCircleY(2, 10));
-// Expected output: 9.092974268256818
+// console.log(getCircleY(2, 10));
+// // Expected output: 9.092974268256818
 
-console.log(getCircleY(Math.PI, 10));
-// Expected output: 1.2246467991473533e-15
+// console.log(getCircleY(Math.PI, 10));
+// // Expected output: 1.2246467991473533e-15
 
 
-function getTanDeg(deg) {
-    var rad = deg * Math.PI / 180;
-    return Math.tan(rad);
-}
+// function getTanDeg(deg) {
+//     var rad = deg * Math.PI / 180;
+//     return Math.tan(rad);
+// }
 
-function getTan(x) {
-    return Math.tan(x);
-}
+// function getTan(x) {
+//     return Math.tan(x);
+// }
 
-console.log(getTan(45));
+// console.log(getTan(45));
 
 const botaoSeno = document.getElementById('seno');
 const botaoCos = document.getElementById('cos');
@@ -68,18 +68,15 @@ const botaoResultado = document.getElementById('resultado');
 const displayCalc = document.getElementById('display');
 
 const calculadora = document.querySelector('.calculadora')
-const botoes = document.querySelector('.botoes')
+const botoes = document.querySelectorAll('.botao')
+console.log(botoes)
 
-botoes.addEventListener('click', e => {
-    if (e.target.matches('botao')) {
-        const botao = e.taget;
-        const acao = botao.dataset.action
-
-        if (!acao) {
-            console.log("keypressed")
+botoes.forEach(botao => {
+    botao.addEventListener('click', e => {
+        // const botaoClicado = botao.dataset.action
+        if (e.target.matches('button')) {
+            console.log("working")
         }
-    }
-
-
+    })
 })
 
