@@ -1,5 +1,5 @@
-// var n1 = []
-// var n2 = []
+var n1 = []
+var n2 = []
 
 // function somatoria(n1, n2) {
 //     return n1 + n2
@@ -65,31 +65,39 @@ const botaoSoma = document.getElementById('soma');
 const botaoDecimal = document.getElementById('decimal');
 const botaoRaiz = document.getElementById('raiz');
 const botaoResultado = document.getElementById('resultado');
-const displayCalc = document.getElementById('display');
 
+const displayCalc = document.getElementById('display');
 const calculadora = document.querySelector('.calculadora')
 const botoes = document.querySelectorAll('.botao')
 // console.log(botoes)
 
 botoes.forEach(teclas => {
     teclas.addEventListener('click', e => {
-        const botao = e.target
-        const acao = botao.dataset.action
+        switch (e.target.innerText) {
+            case 'AC':
+                displayCalc.innerText = '';
+                break
+            // case 'C'
+            //     displayCalc.innerText = ;
+            // break
+            case '+':
+                // function soma
+                break
+            case '-':
+                //function subtração
+                break
+            case '/':
+                //function subtração
+                break
+            case '*':
+                //function multiplicação
+                break
+
+            default:
+                displayCalc.innerText += e.target.innerText;
+        }
+
 
     })
 })
 
-switch (expr) {
-    case '+':
-        n1 + n2;
-        break;
-    case '-':
-        n1 - n2;
-        break;
-    case '/':
-        n1 / n2;
-        break;
-    case '*':
-        n1 * n2;
-        break;
-}
