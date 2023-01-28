@@ -65,7 +65,7 @@ const botaoSoma = document.getElementById('soma');
 const botaoDecimal = document.getElementById('decimal');
 const botaoRaiz = document.getElementById('raiz');
 const botaoResultado = document.getElementById('resultado');
-
+// mudar os seletores e separar por valor e por operação. /\ /\
 const displayCalc = document.getElementById('display');
 const calculadora = document.querySelector('.calculadora')
 const botoes = document.querySelectorAll('.botao')
@@ -73,6 +73,8 @@ const botoes = document.querySelectorAll('.botao')
 
 botoes.forEach(teclas => {
     teclas.addEventListener('click', e => {
+        var primeiroDigito = parseInt(e.target.innerText)
+        console.log(primeiroDigito)
         switch (e.target.innerText) {
             case 'AC':
                 displayCalc.innerText = '';
@@ -92,7 +94,6 @@ botoes.forEach(teclas => {
             case '*':
                 //function multiplicação
                 break
-
             default:
                 displayCalc.innerText += e.target.innerText;
         }
