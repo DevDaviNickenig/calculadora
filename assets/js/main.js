@@ -55,17 +55,18 @@ var n2 = []
 
 // console.log(getTan(45));
 
-const botaoSeno = document.getElementById('seno');
-const botaoCos = document.getElementById('cos');
-const botaoTag = document.getElementById('tag');
-const botaoMulti = document.getElementById('multiplicacao');
-const botaoDivisao = document.getElementById('divisao');
-const botaoSub = document.getElementById('subtracao')
-const botaoSoma = document.getElementById('soma');
-const botaoDecimal = document.getElementById('decimal');
-const botaoRaiz = document.getElementById('raiz');
-const botaoResultado = document.getElementById('resultado');
+// const botaoSeno = document.getElementById('seno');
+// const botaoCos = document.getElementById('cos');
+// const botaoTag = document.getElementById('tag');
+// const botaoMulti = document.getElementById('multiplicacao');
+// const botaoDivisao = document.getElementById('divisao');
+// const botaoSub = document.getElementById('subtracao')
+// const botaoSoma = document.getElementById('soma');
+// const botaoDecimal = document.getElementById('decimal');
+// const botaoRaiz = document.getElementById('raiz');
+// const botaoResultado = document.getElementById('resultado');
 // mudar os seletores e separar por valor e por operação. /\ /\
+const ooperadores = document.querySelectorAll('.operadores')
 const displayCalc = document.getElementById('display');
 const calculadora = document.querySelector('.calculadora')
 const botoes = document.querySelectorAll('.botao')
@@ -74,6 +75,8 @@ const botoes = document.querySelectorAll('.botao')
 botoes.forEach(teclas => {
     teclas.addEventListener('click', e => {
         var primeiroDigito = parseInt(e.target.innerText)
+        var operador = e.target.id
+        console.log(operador)
         console.log(primeiroDigito)
         switch (e.target.innerText) {
             case 'AC':
