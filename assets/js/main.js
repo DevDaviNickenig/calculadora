@@ -86,10 +86,10 @@ botoes.forEach(teclas => {
             //     displayCalc.innerText = ;
             // break
             case '+':
-                // function soma
+                return n1 + n2
                 break
             case '-':
-                //function subtração
+                return n1 - n2
                 break
             case '/':
                 //function subtração
@@ -100,8 +100,6 @@ botoes.forEach(teclas => {
             default:
                 displayCalc.innerText += e.target.innerText;
         }
-
-
     })
 })
 
