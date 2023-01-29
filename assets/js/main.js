@@ -1,3 +1,10 @@
+class Calculadora {
+    constructor(numeroAnterior, numeroAtual) {
+        this.numeroAnterior = numeroAnterior
+        this.numeroAtual = numeroAtual
+    }
+}
+
 const botoesNumeros = document.querySelectorAll('[data-numeros]')
 const botoesOperadores = document.querySelectorAll('[data-operador]')
 const numeroAnterior = document.querySelector('[data-numero-anterior]')
@@ -8,13 +15,13 @@ const botaoIgual = document.querySelector('[data-igual]')
 
 botoesNumeros.forEach(teclas => {
     teclas.addEventListener('click', e => {
-        console.log('numero')
+
     })
 })
 
 botoesOperadores.forEach(teclas => {
     teclas.addEventListener('click', e => {
-        console.log('operador')
+        operador = this.botoesOperadores
     })
 })
 
@@ -30,6 +37,36 @@ botaoIgual.addEventListener('click', e => {
     console.log('resultado')
 })
 
+
+
+function calculo() {
+    let calculo
+    const n1 = parseFloat(this.numeroAnterior)
+    const n2 = parseFloat(this.numeroAtual)
+    switch (operador) {
+        case 'AC':
+            displayCalc.innerText = '';
+            break
+        // case 'C'
+        //     displayCalc.innerText = ;
+        // break
+        case '+':
+            calculo = n1 + n2
+            break
+        case '-':
+            calculo = n1 - n2
+            break
+        case '/':
+            //function subtração
+            break
+        case '*':
+            //function multiplicação
+            break
+        default:
+            displayCalc.innerText += e.target.innerText;
+    }
+
+}
 
 // botoes.forEach(teclas => {
 //     teclas.addEventListener('click', e => {
