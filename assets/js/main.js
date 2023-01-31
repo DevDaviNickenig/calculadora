@@ -4,26 +4,26 @@ class Calculadora {
         this.numeroAtual = numeroAtual
     }
 
-    // limparTudo() {
-    //     this.numeroAnterior = ''
-    //     this.numeroAtual = ''
-    // }
+    limparTudo() {
+        this.numeroAn = ''
+        this.numeroAt = ''
+    }
 
     // deletar() {
 
     // }
 
-    apensarValor() {
-        console.log("numero")
+    apensarValor(numero) {
+        this.numeroAt = numero.toString()
     }
 
     // operacao() {
 
     // }
 
-    // atualizarDisplay {
-
-    // }
+    atualizarDisplay() {
+        this.numeroAtual.innerText = this.numeroAt
+    }
 
 }
 
@@ -40,7 +40,7 @@ const calculadora = new Calculadora(numeroAnterior, numeroAtual)
 botoesNumeros.forEach(teclas => {
     teclas.addEventListener('click', e => {
         calculadora.apensarValor(teclas.innerText)
-        console.log(calculadora)
+        calculadora.atualizarDisplay()
     })
 })
 
