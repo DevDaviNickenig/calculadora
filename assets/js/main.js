@@ -8,22 +8,25 @@ class Calculadora {
     limparTudo() {
         this.numeroAnterior = ''
         this.numeroAtual = ''
-
     }
 
-    // deletar() {
+    // deletar() { 
 
     // }
 
     apensarValor(numero) {
         this.numeroAtual = this.numeroAtual.toString() + numero.toString()
     }
-    // operacao() {
 
-    // }
+    operacao(operacao) {
+        this.operacao = operacao
+        this.numeroAnterior = this.numeroAtual
+        this.numeroAtual = ''
+    }
 
     atualizarDisplay() {
         this.numeroAtualDisplay.innerText = this.numeroAtual
+        this.numeroAnteriorDisplay.innerText = this.numeroAnterior
     }
 
 }
@@ -45,9 +48,10 @@ botoesNumeros.forEach(botoes => {
     })
 })
 
-botoesOperadores.forEach(teclas => {
-    teclas.addEventListener('click', e => {
-        operador = this.botoesOperadores
+botoesOperadores.forEach(botoes => {
+    botoes.addEventListener('click', () => {
+        calculadora.operacao(botoes.innerText)
+        calculadora.atualizarDisplay()
     })
 })
 
