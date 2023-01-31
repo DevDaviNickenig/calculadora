@@ -30,27 +30,22 @@ class Calculadora {
         const anterior = this.numeroAnterior
         const atual = this.numeroAtual
         switch (this.operacao) {
-            case 'AC':
-                displayCalc.innerText = '';
-                break
-            // case 'C'
-            //     displayCalc.innerText = ;
-            // break
             case '+':
-                calculo = n1 + n2
+                calc = anterior + atual;                
                 break
             case '-':
-                calculo = n1 - n2
+                calculo = anterior - atual
                 break
             case '/':
-                //function subtração
+                calculo =  anterior / atual
                 break
             case '*':
-                //function multiplicação
-                break
+                calculo = anterior * atual
+                break               
             default:
-                displayCalc.innerText += e.target.innerText;
+                return
         }
+        this.numeroAtual = calc
     }
 
     atualizarDisplay() {
