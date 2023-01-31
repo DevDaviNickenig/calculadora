@@ -15,6 +15,7 @@ class Calculadora {
     // }
 
     apensarValor(numero) {
+        if (numero == '.' && this.numeroAtual.includes('.')) return
         this.numeroAtual = this.numeroAtual.toString() + numero.toString()
     }
 
