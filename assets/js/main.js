@@ -34,25 +34,28 @@ class Calculadora {
         if (isNaN(anterior) || isNaN(atual)) return
         switch (this.operacao) {
             case '+':
-                calc = anterior + atual;                
+                calc = anterior + atual;
                 break
             case '-':
                 calc = anterior - atual;
                 break
             case '÷':
-                calc =  anterior / atual
+                calc = anterior / atual
                 break
             case '*':
                 calc = anterior * atual
-                break               
+                break
+            case '%':
+                calc = anterior
+
             default:
                 return
         }
         this.numeroAtual = calc
         this.operacao = undefined
         this.numeroAnterior = ''
-        
-        
+
+
     }
 
     atualizarDisplay() {
@@ -103,43 +106,4 @@ botaoIgual.addEventListener('click', e => {
 })
 
 
-
-// function calculo() {
-//     let calculo
-//     const n1 = parseFloat(this.numeroAnterior)
-//     const n2 = parseFloat(this.numeroAtual)
-    
-
-// }
-
-// botoes.forEach(teclas => {
-//     teclas.addEventListener('click', e => {
-//         var primeiroDigito = parseInt(e.target.innerText)
-//         var operador = e.target.id
-//         console.log(operador)
-//         console.log(primeiroDigito)
-//         switch (e.target.innerText) {
-//             case 'AC':
-//                 displayCalc.innerText = '';
-//                 break
-//             // case 'C'
-//             //     displayCalc.innerText = ;
-//             // break
-//             case '+':
-//                 return n1 + n2
-//                 break
-//             case '-':
-//                 return n1 - n2
-//                 break
-//             case '/':
-//                 //function subtração
-//                 break
-//             case '*':
-//                 //function multiplicação
-//                 break
-//             default:
-//                 displayCalc.innerText += e.target.innerText;
-//         }
-//     })
-// })
 
