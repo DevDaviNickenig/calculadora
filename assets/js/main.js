@@ -19,10 +19,14 @@ class Calculadora {
         this.numeroAtual = this.numeroAtual.toString() + numero.toString()
     }
 
-    operacao(operacao) {
+    escolherOperacao(operacao) {
         this.operacao = operacao
-        this.numeroAnterior = this.numeroAtual
+        this.numeroAnterior = this.numeroAtual + operacao;
         this.numeroAtual = ''
+    }
+
+    calculo() {
+
     }
 
     atualizarDisplay() {
@@ -51,24 +55,25 @@ botoesNumeros.forEach(botoes => {
 
 botoesOperadores.forEach(botoes => {
     botoes.addEventListener('click', () => {
-        calculadora.operacao(botoes.innerText)
+        calculadora.escolherOperacao(botoes.innerText)
         calculadora.atualizarDisplay()
     })
 })
 
-botaoLimparTudo.addEventListener('click', e => {
+botaoLimparTudo.addEventListener('click', () => {
     calculadora.limparTudo()
     calculadora.atualizarDisplay()
 
 })
 
-botaoDeletar.addEventListener('click', e => {
+botaoDeletar.addEventListener('click', () => {
     calculadora.deletar()
     calculadora.atualizarDisplay()
 })
 
 botaoIgual.addEventListener('click', e => {
-    console.log('resultado')
+    calculadora.calculo()
+    calculadora.atualizarDisplay()
 })
 
 
