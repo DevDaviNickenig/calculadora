@@ -10,9 +10,9 @@ class Calculadora {
         this.numeroAtual = ''
     }
 
-    // deletar() { 
-
-    // }
+    deletar() {
+        this.numeroAtual = this.numeroAtual.toString().slice(0, -1)
+    }
 
     apensarValor(numero) {
         if (numero == '.' && this.numeroAtual.includes('.')) return
@@ -63,7 +63,8 @@ botaoLimparTudo.addEventListener('click', e => {
 })
 
 botaoDeletar.addEventListener('click', e => {
-    console.log('deletou?')
+    calculadora.deletar()
+    calculadora.atualizarDisplay()
 })
 
 botaoIgual.addEventListener('click', e => {
