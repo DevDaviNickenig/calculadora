@@ -8,6 +8,7 @@ class Calculadora {
     limparTudo() {
         this.numeroAnterior = ''
         this.numeroAtual = ''
+        this.operador = undefined
     }
 
     deletar() {
@@ -15,37 +16,43 @@ class Calculadora {
     }
 
     apensarValor(numero) {
-        if (numero == '.' && this.numeroAtual.includes('.')) return
+        if (numero === '.' && this.numeroAtual.includes('.')) return
         this.numeroAtual = this.numeroAtual.toString() + numero.toString()
     }
 
     escolherOperacao(operacao) {
+        if (this.numeroAtual == '') return
         this.operacao = operacao
-        this.numeroAnterior = this.numeroAtual + operacao;
+        this.numeroAnterior = this.numeroAtual
         this.numeroAtual = ''
     }
 
     calculo() {
         let calc
-        const anterior = this.numeroAnterior
-        const atual = this.numeroAtual
+        const anterior = parseInt(this.numeroAnterior)
+        const atual = parseInt(this.numeroAtual)
+        if (isNaN(anterior) || isNaN(atual)) return
         switch (this.operacao) {
             case '+':
                 calc = anterior + atual;                
                 break
             case '-':
-                calculo = anterior - atual
+                calc = anterior - atual;
                 break
-            case '/':
-                calculo =  anterior / atual
+            case '÷':
+                calc =  anterior / atual
                 break
             case '*':
-                calculo = anterior * atual
+                calc = anterior * atual
                 break               
             default:
                 return
         }
         this.numeroAtual = calc
+        this.operacao = undefined
+        this.numeroAnterior = ''
+        
+        
     }
 
     atualizarDisplay() {
