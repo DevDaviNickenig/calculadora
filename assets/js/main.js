@@ -3,6 +3,12 @@ class Calculadora {
         this.numeroAnterior = numeroAnterior
         this.numeroAtual = numeroAtual
     }
+
+    // limparTudo() {
+    //     this.numeroAnterior = ''
+    //     this.numeroAtual = ''
+    //     this.operador = undefined;
+    // }
 }
 
 const botoesNumeros = document.querySelectorAll('[data-numeros]')
@@ -15,9 +21,15 @@ const botaoIgual = document.querySelector('[data-igual]')
 
 botoesNumeros.forEach(teclas => {
     teclas.addEventListener('click', e => {
+        this.numeroAnterior = e.target.numeroAnterior;
+
 
     })
 })
+
+const calculadora = new Calculadora(numeroAnterior, numeroAtual)
+
+
 
 botoesOperadores.forEach(teclas => {
     teclas.addEventListener('click', e => {
@@ -26,7 +38,8 @@ botoesOperadores.forEach(teclas => {
 })
 
 botaoLimparTudo.addEventListener('click', e => {
-    console.log('limpou tudo??')
+    calculadora.limparTudo()
+
 })
 
 botaoDeletar.addEventListener('click', e => {
