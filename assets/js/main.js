@@ -26,7 +26,31 @@ class Calculadora {
     }
 
     calculo() {
-
+        let calc
+        const anterior = this.numeroAnterior
+        const atual = this.numeroAtual
+        switch (this.operacao) {
+            case 'AC':
+                displayCalc.innerText = '';
+                break
+            // case 'C'
+            //     displayCalc.innerText = ;
+            // break
+            case '+':
+                calculo = n1 + n2
+                break
+            case '-':
+                calculo = n1 - n2
+                break
+            case '/':
+                //function subtração
+                break
+            case '*':
+                //function multiplicação
+                break
+            default:
+                displayCalc.innerText += e.target.innerText;
+        }
     }
 
     atualizarDisplay() {
@@ -82,28 +106,7 @@ botaoIgual.addEventListener('click', e => {
 //     let calculo
 //     const n1 = parseFloat(this.numeroAnterior)
 //     const n2 = parseFloat(this.numeroAtual)
-//     switch (operador) {
-//         case 'AC':
-//             displayCalc.innerText = '';
-//             break
-//         // case 'C'
-//         //     displayCalc.innerText = ;
-//         // break
-//         case '+':
-//             calculo = n1 + n2
-//             break
-//         case '-':
-//             calculo = n1 - n2
-//             break
-//         case '/':
-//             //function subtração
-//             break
-//         case '*':
-//             //function multiplicação
-//             break
-//         default:
-//             displayCalc.innerText += e.target.innerText;
-//     }
+    
 
 // }
 
