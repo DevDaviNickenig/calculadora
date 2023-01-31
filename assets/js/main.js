@@ -22,6 +22,9 @@ class Calculadora {
 
     escolherOperacao(operacao) {
         if (this.numeroAtual == '') return
+        if (operacao === 'sen0') {
+            seno()
+        }
         this.operacao = operacao
         this.numeroAnterior = this.numeroAtual
         this.numeroAtual = ''
@@ -45,17 +48,12 @@ class Calculadora {
             case '*':
                 calc = anterior * atual
                 break
-            case '%':
-                calc = anterior
-
             default:
                 return
         }
         this.numeroAtual = calc
         this.operacao = undefined
         this.numeroAnterior = ''
-
-
     }
 
     atualizarDisplay() {

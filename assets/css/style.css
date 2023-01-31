@@ -1,53 +1,47 @@
-body {
+.body {
   display: grid;
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
   justify-content: center;
-  background-color: #08aeea;
-  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+  background-color: hsl(222, 26%, 31%);
+  margin: 2rem;
 }
 
 .calculadora {
-  max-width: max-content;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   align-self: center;
   gap: 5px;
-  background-color: #5c6f7e;
-  border: 5px solid black;
+  background-color: hsl(222, 26%, 31%);
+  border: 5px solid hsl(0, 0%, 100%);
   border-radius: 10px;
   padding: 0.5rem;
 }
 
 .display--calculadora {
-  grid-column: 1/6;
+  grid-column: 1 / 5;
   display: grid;
   grid-template-rows: 1fr 1fr;
   text-align: end;
   font-size: 1rem;
+  border: 2px solid white;
   background-color: black;
   color: #f9f9f9;
 }
 
 .numero-atual {
   grid-row: 0 / 1;
-
-  background-image: linear-gradient(
-    to right,
-    #cb2d3e 0%,
-    #ef473a 51%,
-    #cb2d3e 100%
-  );
+  background-color: hsl(223, 14%, 31%);
+  color: hsl(0, 0%, 100%);
 }
 
 .numero-anterior {
   grid-row: 1 / 2;
+  background-color: hsl(221, 14%, 31%);
+  color: hsl(0, 0%, 100%);
 }
 
 .operador--resultado {
-  grid-column: 5/6;
+  grid-column: 4/5;
   grid-row: 5/7;
 
   background-image: linear-gradient(
@@ -73,13 +67,13 @@ body {
 }
 
 .botao {
-  background-color: #070707;
-  color: white;
-  /* border: 2px solid #090909; */
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 0%, 100%);
   border-radius: 10px;
   padding: 1rem;
 }
 
 .botao:hover {
-  background-color: gray;
+  background-color: hsl(224, 28%, 35%);
 }
