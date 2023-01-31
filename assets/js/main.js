@@ -57,6 +57,7 @@ botoesOperadores.forEach(botoes => {
 
 botaoLimparTudo.addEventListener('click', e => {
     calculadora.limparTudo()
+    calculadora.atualizarDisplay()
 
 })
 
