@@ -7,8 +7,24 @@ class Calculadora {
     // limparTudo() {
     //     this.numeroAnterior = ''
     //     this.numeroAtual = ''
-    //     this.operador = undefined;
     // }
+
+    // deletar() {
+
+    // }
+
+    apensarValor() {
+        console.log("numero")
+    }
+
+    // operacao() {
+
+    // }
+
+    // atualizarDisplay {
+
+    // }
+
 }
 
 const botoesNumeros = document.querySelectorAll('[data-numeros]')
@@ -19,17 +35,14 @@ const botaoLimparTudo = document.querySelector('[data-reset]')
 const botaoDeletar = document.querySelector('[data-delete]')
 const botaoIgual = document.querySelector('[data-igual]')
 
-botoesNumeros.forEach(teclas => {
-    teclas.addEventListener('click', e => {
-        this.numeroAnterior = e.target.numeroAnterior;
-
-
-    })
-})
-
 const calculadora = new Calculadora(numeroAnterior, numeroAtual)
 
-
+botoesNumeros.forEach(teclas => {
+    teclas.addEventListener('click', e => {
+        calculadora.apensarValor(teclas.innerText)
+        console.log(calculadora)
+    })
+})
 
 botoesOperadores.forEach(teclas => {
     teclas.addEventListener('click', e => {
