@@ -22,9 +22,6 @@ class Calculadora {
 
     escolherOperacao(operacao) {
         if (this.numeroAtual == '') return
-        if (operacao === 'sen0') {
-            seno()
-        }
         this.operacao = operacao
         this.numeroAnterior = this.numeroAtual
         this.numeroAtual = ''
